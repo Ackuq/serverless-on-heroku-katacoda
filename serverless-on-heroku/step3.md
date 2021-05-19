@@ -17,20 +17,24 @@ we get from the Heroku CLI. We directly store it in the variable `$TOKEN` which 
 
 `TOKEN=$(heroku auth:token)`{{execute}}
 
-`curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos -H "Accept: application/vnd.heroku+json; version=3" -H "Authorization: Bearer $TOKEN"`{{execute}}
+```shell
+curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos \
+-H "Accept: application/vnd.heroku+json; version=3" \
+-H "Authorization: Bearer $TOKEN"
+```{{execute}}
 
 However, this request still does not specify which dyno to start. Similar to the command we ran on the Heroku CLI, we
 also want to inform Heroku that it should `run` a specific command. The command should be the dyno defined in the
 `Procfile`: `serverless`. As we pass these data in JSON format, we also have to add this information to the header.
 
-````
+```shell
 curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos \
 -H "Accept: application/vnd.heroku+json; version=3" \
 -H "Authorization: Bearer $TOKEN" \
 -H "Content-Type: application/json" \
 -d '{
-  "command": "serverless",
-  "type": "run"
+"command": "serverless",
+"type": "run"
 }'
 ```{{execute}}
 
@@ -42,7 +46,7 @@ the function.
 _Request_
 
 ```shell
-$ curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos \
+curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos \
 -H "Accept: application/vnd.heroku+json; version=3" \
 -H "Authorization: Bearer $TOKEN" \
 -H "Content-Type: application/json" \
@@ -53,7 +57,7 @@ $ curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos \
     "NAME": "Daniela"
   }
 }'
-````
+```{{execute}}
 
 _Response_
 
@@ -72,6 +76,5 @@ as well as additional information about the created dyno.
 To make the following commands easier to execute, export the returned dyno name under the key `name` in the response object to an
 environment variable called `$DYNO_NAME`.
 
-```shell
-$ DYNO_NAME=<DYNO_NAME> # Replace <DYNO_NAME> with name of newly created dyno
-```
+`DYNO_NAME=<DYNO_NAME> # Replace <DYNO_NAME> with name of newly created dyno`{{execute}}`
+
