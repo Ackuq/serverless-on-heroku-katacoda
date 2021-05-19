@@ -4,6 +4,18 @@
   "difficulty": "Intermediate",
   "time": "15",
   "details": {
+    "assets": {
+      "host01": [
+        {
+          "file": "Procfile",
+          "target": "/root/example-app"
+        },
+        {
+          "file": "requirements.txt",
+          "target": "/root/example-app"
+        }
+      ]
+    },
     "steps": [
       {
         "title": "Step 1",
@@ -30,7 +42,8 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "uieditorpath": "/root/example-app"
   },
   "backend": {
     "imageid": "ubuntu:2004"
