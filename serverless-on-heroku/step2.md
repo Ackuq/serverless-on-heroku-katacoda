@@ -106,7 +106,7 @@ We should get an output similar to the one above, take note of the app name, whi
 
 For ease of access, we add the newly created app's name to an environment variable called `$APP_NAME`.
 
-`APP_NAME=<YOUR_APP_NAME> # Replace <YOUR_APP_NAME> with name of your newly created app`{{execute}}
+`APP_NAME=<YOUR_APP_NAME> # Replace <YOUR_APP_NAME> with name of your newly created app`{{copy}}
 
 When having a Git repository with the relevant programme code and a linked app on the Heroku platform, you just have to
 push the code to Heroku.
