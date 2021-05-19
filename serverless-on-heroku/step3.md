@@ -6,9 +6,11 @@ feel confident enough with the Heroku CLI, you can [skip this section and procee
 The Heroku Platform API offers an [option to create dynos with a POST request](https://devcenter.heroku.com/articles/platform-api-reference#dyno-create), which can be used to start a one-off dyno. We just have to insert the name of the app for `$APP_NAME`, which we exported as an environment variable already.
 
 _Request_
+
 `curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos`{{execute}}
 
-_Response_
+_Expected response_
+
 ```json
 {
   "id":"missing_version",
@@ -18,9 +20,11 @@ _Response_
 This POST request on its own, however, would not succeed. We have to specify the API's version in the header.
 
 _Request_
+
 `curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos -H "Accept: application/vnd.heroku+json; version=3"`{{execute}}
 
-_Response_
+_Expected response_
+
 ```json
 {
   "id":"unauthorized",
@@ -34,13 +38,14 @@ we get from the Heroku CLI. We directly store it in the variable `$TOKEN` which 
 `TOKEN=$(heroku auth:token)`{{execute}}
 
 _Request_
+
 ```shell
 curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos \
 -H "Accept: application/vnd.heroku+json; version=3" \
 -H "Authorization: Bearer $TOKEN"
 ```{{execute}}
 
-_Response_
+_Expected response_
 ```json
 {
   "id":"invalid_params",
@@ -66,7 +71,7 @@ curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos \
 }'
 ```{{execute}}
 
-_Response_
+_Expected response_
 ```json
 {
   "attach_url":null,
@@ -104,9 +109,9 @@ curl -X POST https://api.heroku.com/apps/$APP_NAME/dynos \
 }'
 ```{{execute}}
 
-_Response_
+_Expected response_
 
-```js
+```json
 {
     ...
     "name": "<DYNO_NAME>",
