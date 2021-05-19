@@ -10,6 +10,8 @@ command itself and that the ongoing logs should be streamed.
 
 For passing our `$DYNO_NAME` environment variable as a JSON string, we need to surround it with single quotes surrounded by double quotes.
 
+If this command fails, go back to previous step and try starting the dyno again, and be sure to extract the name of the dyno to your environment variable `DYNO_NAME`
+
 _Request_
 
 ```shell
@@ -22,7 +24,7 @@ $ curl -n -X POST https://api.heroku.com/apps/$APP_NAME/log-sessions \
   "source": "app",
   "tail": true
 }'
-```
+```{{execute}}
 
 _Response_
 
@@ -39,9 +41,7 @@ This URL can be opened in your browser or fetch it with `curl`. It does not requ
 
 _Request_
 
-```shell
-$ curl <LOGPLEX_URL> # Replace <LOGPLEX_URL> with value under key "logplex_url" in previous JSON response
-```
+`curl <LOGPLEX_URL> # Replace <LOGPLEX_URL> with value under key "logplex_url" in previous JSON response`{{copy}}
 
 _Response_
 ```shell
