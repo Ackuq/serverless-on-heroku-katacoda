@@ -64,11 +64,17 @@ Heroku to run our newly created Python script `serverless-task.py`.
 
 _Procfile_
 
-```
+<pre class="file" data-filename="Procfile" data-target="replace">
 serverless: python serverless-task.py
-```
+</pre>
 
 Do not forget to also create an empty `requirements.txt` in the app folder.
+
+_requirements.txt_
+
+<pre class="file" data-filename="requirements.txt" data-target="replace">
+
+</pre>
 
 We now create an application in our Heroku account. At first, we have to initialise a Git repository with the programme
 code as Heroku usually manages deployments with Git. We do this by simply initialising a Git repo in `example-app` and
