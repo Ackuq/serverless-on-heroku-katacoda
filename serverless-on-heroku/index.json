@@ -4,22 +4,6 @@
   "difficulty": "Intermediate",
   "time": "15",
   "details": {
-    "assets": {
-      "host01": [
-        {
-          "file": "Procfile",
-          "target": "/root/example-app"
-        },
-        {
-          "file": "requirements.txt",
-          "target": "/root/example-app"
-        },
-        {
-          "file": "serverless-task.py",
-          "target": "/root/example-app"
-        }
-      ]
-    },
     "steps": [
       {
         "title": "Step 1",

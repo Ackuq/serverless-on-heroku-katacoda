@@ -40,7 +40,7 @@ read the function logs.
 
 _serverless-task.py_
 
-```python
+<pre class="file" data-filename="serverless-task.py" data-target="replace">
 import os
 
 if 'NAME' in os.environ and len(os.environ['NAME'].strip()) > 0:
@@ -49,7 +49,7 @@ else:
   name = 'World'
 
 print('Hello ' + name + '!')
-```
+</pre>
 
 We add the Python implementation with the required `import` statement, under the name `serverless-task.py` to the new folder `example-app` for the Heroku app.
 
