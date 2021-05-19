@@ -120,7 +120,9 @@ the web address of this app as only dynos of the type _web_ can receive HTTP req
 call the one-off dyno via the Heroku CLI: We just have to tell Heroku to `run` the dyno which we defined in the
 `Procfile`.
 
-`heroku run serverless`{{execute}}
+`heroku run:detached serverless`{{execute}}
 
-If you implement the function from above, you will see `Hello World!` on the console as we did not set any environment
+We run this in detached mode since the Katacoda terminal doesn't support attaching directly to the log stream.
+
+You will get an output when running the command which contains a command to see the log messages, in the form `heroku logs --app ... --dyno ...`, copy that command and run it if you are interested to see the logs (the command does not attach you to the log stream, so Katacoda supports it). If you implemented the function from above, you will see `Hello World!` on the console as we did not set any environment
 variable.
