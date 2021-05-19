@@ -15,7 +15,7 @@ If this command fails, go back to previous step and try starting the dyno again,
 _Request_
 
 ```shell
-$ curl -n -X POST https://api.heroku.com/apps/$APP_NAME/log-sessions \
+curl -n -X POST https://api.heroku.com/apps/$APP_NAME/log-sessions \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer $TOKEN" \
 -H "Accept: application/vnd.heroku+json; version=3" \
@@ -39,11 +39,15 @@ _Response_
 The response from creating the log session will include a URL to the log session, specified under the key `logplex_url`. 
 This URL can be opened in your browser or fetch it with `curl`. It does not require additional authentication.
 
+It is important that you have quotation marks around the URL when using `curl`, otherwise this will fail.
+
 _Request_
 
-`curl <LOGPLEX_URL> # Replace <LOGPLEX_URL> with value under key "logplex_url" in previous JSON response`{{copy}}
+`curl "<LOGPLEX_URL>" # Replace <LOGPLEX_URL> with value under key "logplex_url" in previous JSON response`{{copy}}
 
 _Response_
 ```shell
 app[<DYNO_NAME>]: Hello Daniela!
 ```
+
+If the response is empty, it may mean that the logs have expired, in that case, trigger the one-off dyno again, as in the previous step, and try this step again.

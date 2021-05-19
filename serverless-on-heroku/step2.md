@@ -111,7 +111,7 @@ For ease of access, we add the newly created app's name to an environment variab
 When having a Git repository with the relevant programme code and a linked app on the Heroku platform, you just have to
 push the code to Heroku.
 
-`git push heroku main`{{ execute }}
+`git push heroku master`{{ execute }}
 
 Read more about pushing code to Heroku in [Heroku's Dev Center](https://devcenter.heroku.com/articles/git).
 
