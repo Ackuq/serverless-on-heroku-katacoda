@@ -51,7 +51,7 @@ else:
 print('Hello ' + name + '!')
 ```
 
-We add the Python implementation with the required `import` statement (see [example](https://github.com/felix-seifert/serverless-on-heroku/blob/main/one-off-dyno/serverless-task.py) for reference), under the name `serverless-task.py` to the new folder `example-app` for the Heroku app.
+We add the Python implementation with the required `import` statement, under the name `serverless-task.py` to the new folder `example-app` for the Heroku app.
 
 ### Upload Code to Heroku
 

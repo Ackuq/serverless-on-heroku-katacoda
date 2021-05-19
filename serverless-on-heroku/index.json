@@ -13,6 +13,10 @@
         {
           "file": "requirements.txt",
           "target": "/root/example-app"
+        },
+        {
+          "file": "serverless-task.py",
+          "target": "/root/example-app"
         }
       ]
     },
