@@ -1,8 +1,4 @@
-## Downloading and logging into the Heroku CLI
-
-First off, we are going to download the Heroku CLI:
-
-`snap install heroku --classic`{{ execute }}
+## Logging into the Heroku CLI
 
 Log in to Heroku using your Heroku account:
 

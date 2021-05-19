@@ -75,8 +75,11 @@ code as Heroku usually manages deployments with Git. We do this by simply initia
 then adding and committing the code to it.
 
 `cd example-app`{{execute}}
+
 `git init`{{execute}}
+
 `git add .`{{execute}}
+
 `git commit -m "Initial commit"`{{execute}}
 
 Since the names of all Heroku apps are in a global namespace, lots of names are already taken and we cannot suggest a
@@ -85,6 +88,15 @@ Besides an app with a random name on the Heroku platform, this command results i
 repository, i.e. a remote version of the repository on Heroku's servers.
 
 `heroku create`{{execute}}
+
+_Example return_
+
+```log
+Creating app... done, ⬢ nameless-ocean-15377
+https://nameless-ocean-15377.herokuapp.com/ | https://git.heroku.com/nameless-ocean-15377.git
+```
+
+We should get an output similar to the one above, take note of the app name, which is "nameless-ocean-15377" for the above example.
 
 For ease of access, we add the newly created app's name to an environment variable called `$APP_NAME`.
 

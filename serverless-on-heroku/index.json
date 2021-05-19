@@ -39,7 +39,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "courseData": "background-setup.sh"
     },
     "finish": {
       "text": "finish.md"
