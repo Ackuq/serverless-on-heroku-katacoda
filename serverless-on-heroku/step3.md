@@ -1,9 +1,9 @@
 ## Trigger HTTP Requests
 
 Subsequently, we will explain how the request to trigger an HTTP request to the one-off dyno is composed. If you already
-feel confident enough with the Heroku Platform API, you can [skip this section and proceed with the final request](#final-request-and-response).
+feel confident enough with the Heroku Platform API, you can skip to the end of this step section and proceed with the final request.
 
-The Heroku Platform API gives the option to trigger service like the ones of the Heroku CLI via typical HTTP REST calls.  It therefore frees authenticated entities from the need of an installed Heroku CLI and offers an  [option to create dynos with a POST request](https://devcenter.heroku.com/articles/platform-api-reference#dyno-create),  which can be used to start a one-off dyno. We just have to insert the name of the app for `$APP_NAME`, which we exported as an environment variable already.
+The Heroku Platform API gives the option to trigger service like the ones of the Heroku CLI via typical HTTP REST calls.  It therefore frees authenticated entities from the need of an installed Heroku CLI and offers an [option to create dynos with a POST request](https://devcenter.heroku.com/articles/platform-api-reference#dyno-create),  which can be used to start a one-off dyno. We just have to insert the name of the app for `$APP_NAME`, which we exported as an environment variable already.
 
 _Request_
 
@@ -14,7 +14,8 @@ _Expected response_
 ```json
 {
   "id":"missing_version",
-  "error":"Please specify a version along with Heroku's API MIME type. For example, `Accept: application/vnd.heroku+json; version=3`.\n"}$ 
+  "error":"Please specify a version along with Heroku's API MIME type. For example, `Accept: application/vnd.heroku+json; version=3`."
+} 
 ```
 
 This POST request on its own, however, would not succeed. We have to specify the API's version in the header.
@@ -121,7 +122,7 @@ _Expected response_
 
 The logs from the execution is however not included in the response of the request. To get the resulting logs, we have  to request a specific URL for them. The prior response will include the name of the dyno under the JSON key `name` in the response, as well as additional information about the created dyno.
 
-To make the following commands easier to execute, export the returned dyno name under the key `name` in the response object to an environment variable called `$DYNO_NAME`.
+To make the following commands easier to execute, export the returned dyno name under the key `name` in the response object, which should have the format `run.<NUMBER>` (e.g. `run.1234`), to an environment variable called `$DYNO_NAME`.
 
 `DYNO_NAME=<DYNO_NAME> # Replace <DYNO_NAME> with name of newly created dyno`{{copy}}
 

@@ -46,7 +46,7 @@ _Request_
 
 _Response_
 ```shell
-app[<DYNO_NAME>]: Hello Daniela!
+<TIME STAMP> app[<DYNO_NAME>]: Hello Daniela!
 ```
 
 If the response is empty, it may mean that the logs have expired, in that case, trigger the one-off dyno again, as in the previous step, and try this step again.
