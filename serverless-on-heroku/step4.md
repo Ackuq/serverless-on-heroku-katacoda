@@ -9,7 +9,7 @@ We include the parameters `"source": "app"` to specify that we only want the log
 
 For passing our `$DYNO_NAME` environment variable as a JSON string, we need to surround it with single quotes surrounded by double quotes.
 
-If this command fails, go back to previous step and try starting the dyno again, and be sure to extract the name of the dyno to your environment variable `DYNO_NAME`
+If this command fails, go back to previous step and try starting the dyno again, and be sure to extract the name of the dyno to your environment variable `$DYNO_NAME`
 
 _Request_
 

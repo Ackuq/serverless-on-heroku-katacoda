@@ -1,5 +1,8 @@
 ## Logging into the Heroku CLI
 
+For the interaction between our local machine and the Heroku platform, we use the Herkou CLI. The CLI allows us to 
+perform most of the required interactions with the platform from the local command line. In this Katacoda tutorial, we have already installed the CLI for you to use.
+
 Log in to Heroku using your Heroku account:
 
 `heroku login -i`{{ execute }}

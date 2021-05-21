@@ -6,7 +6,7 @@ out your one-off dyno and see how Heroku can be used to implement serverless Fun
 provide the name of your Heroku app, your Heroku API key, the name of your dyno and the name which should be used in 
 the Python function above. It will return the logs of the app in which you can see the return value.
 
-You can also see a description on [how we managed to implement the calling site of the one-off dyno](https://felix-seifert.github.io/serverless-on-heroku/frontend).
+You can also see a description on [how we managed to implement the calling site of the one-off dyno](https://felix-seifert.github.io/serverless-on-heroku/frontend). This approach can be used to trigger a function which runs independently of the calling service and process its result later on.
 
 ## Thank You
 
