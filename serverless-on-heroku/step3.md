@@ -120,9 +120,9 @@ _Expected response_
 }
 ```
 
-The logs from the execution is however not included in the response of the request. To get the resulting logs, we have  to request a specific URL for them. The prior response will include the name of the dyno under the JSON key `name` in the response, as well as additional information about the created dyno.
+The logs from the execution are however not included in the response of the request. To get the resulting logs, we have  to request a specific URL for them. The prior response will include the name of the dyno under the JSON key `name` in the response, as well as additional information about the created dyno.
 
-To make the following commands easier to execute, export the returned dyno name under the key `name` in the response object, which should have the format `run.<NUMBER>` (e.g. `run.1234`), to an environment variable called `$DYNO_NAME`.
+The dyno name under the key `name` in the response object has the format `run.<NUMBER>` (e.g. `run.1234`). To make the following commands easier to execute, export the returned name to an environment variable called `$DYNO_NAME`.
 
 `DYNO_NAME=<DYNO_NAME> # Replace <DYNO_NAME> with name of newly created dyno`{{copy}}
 

@@ -53,7 +53,7 @@ We add the Python implementation with the required `import` statement, under the
 
 A `Procfile` on Heroku is a text file which declares the dynos configurations and tells the platform which commands to execute on the dyno's startup. We have to create a `Procfile` in the folder `example-app` to tell Heroku what to do when we try to start our one-off dyno.
 
-The syntax of a `Procfile` is quite simple: It should be called `Procfile` and after an identifier, it tells Heroku what to execute on the commandline. Our identifier is `serverless`, this is how our one-off dyno can be reached later on. We then tell Heroku to run our newly created Python script `serverless-task.py`. As our Python script is finite, the dyno descriptionwill be a one-off dyno.
+The syntax of a `Procfile` is quite simple: It should be called `Procfile` and after an identifier, it tells Heroku what to execute on the commandline. Our identifier is `serverless`, this is how our one-off dyno can be reached later on. We then tell Heroku to run our newly created Python script `serverless-task.py`. As our Python script is finite, the dyno description will be a one-off dyno.
 
 _Procfile_
 
@@ -115,7 +115,6 @@ call the one-off dyno via the Heroku CLI: We just have to tell Heroku to `run` t
 
 `heroku run:detached serverless`{{execute}}
 
-We run this in detached mode since the Katacoda terminal doesn't support attaching directly to the log stream.
+We run this in detached mode since the Katacoda terminal does not support attaching directly to the log stream.
 
-You will get an output when running the command which contains a command to see the log messages, in the form `heroku logs --app ... --dyno ...`, copy that command and run it if you are interested to see the logs (the command does not attach you to the log stream, so Katacoda supports it). If you implemented the function from above, you will see `Hello World!` on the console as we did not set any environment
-variable.
+You will get an output in the form `heroku logs --app ... --dyno ...` when running the command. The output contains a command to see the log messages. Copy that command and run it (the command does not attach you to the log stream). If your implementation is correct and your files got pushed to Heroku, you will see `Hello World!` on the console as we did not set any environment variable.
