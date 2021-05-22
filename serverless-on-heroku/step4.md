@@ -9,7 +9,7 @@ We include the parameters `"source": "app"` to specify that we only want the log
 
 For passing our `$DYNO_NAME` environment variable as a JSON string, we need to surround it with single quotes surrounded by double quotes.
 
-If this command fails, go back to previous step and try starting the dyno again, and be sure to extract the name of the dyno to your environment variable `$DYNO_NAME`
+If this command fails, go back to previous step and try starting the dyno again. Be sure to extract the name of the dyno to your environment variable `$DYNO_NAME`.
 
 _Request_
 
@@ -49,4 +49,4 @@ _Response_
 <TIME STAMP> app[<DYNO_NAME>]: Hello Daniela!
 ```
 
-If the response is empty, it may mean that the logs have expired, in that case, trigger the one-off dyno again, as in the previous step, and try this step again.
+If the response is empty, the logs might already be expired. In that case, trigger the one-off dyno again, as in the previous step, and try to retrieve the logs again.

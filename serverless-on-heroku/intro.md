@@ -19,7 +19,7 @@ To complete this tutorial, you will need:
 -   Free account on [heroku.com](http://heroku.com/)
 -   Some basic understanding of programming languages
 
-If working on your local machine, you will need:
+To execute the tutorial on your local machine, go to the [GitHub tutorial](https://github.com/felix-seifert/serverless-on-heroku). You will also need:
 
 -   Working installation of the Heroku command-line interface (CLI) where you are already logged in. For information about how to get started with the Heroku CLI and how to authenticate with it, [have a look at Herkou's Dev Center](https://devcenter.heroku.com/articles/heroku-cli).
 -   Shell with `curl`
